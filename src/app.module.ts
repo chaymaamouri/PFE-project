@@ -13,7 +13,7 @@ import { config } from './orm.config';
 
 
 @Module({
-  imports:[TypeOrmModule.forRoot(config),FactureModule],
+  imports:[TypeOrmModule.forRoot(config),FactureModule,AbonnéModule],
   controllers: [AppController],
   providers: [AppService],
   
