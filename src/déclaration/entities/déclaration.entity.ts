@@ -1,4 +1,5 @@
 import { Column, Entity , PrimaryGeneratedColumn } from "typeorm";
+@Entity()
 export class Déclaration {
 @PrimaryGeneratedColumn()
 public id_déclaration :number ;

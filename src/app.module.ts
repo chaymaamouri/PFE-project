@@ -8,12 +8,16 @@ import { DéclarationModule } from './déclaration/déclaration.module';
 import { AbonnéModule } from './abonné/abonné.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { config } from './orm.config';
+import { Facture } from './facture/entities/facture.entity';
 
 
 
 
 @Module({
-  imports:[TypeOrmModule.forRoot(config),FactureModule,AbonnéModule],
+  imports:[
+    ConfigModule.forRoot({ isGlobal: true }),
+    TypeOrmModule.forRoot(config)],
+   
   controllers: [AppController],
   providers: [AppService],
   
